@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: employeecollection-coll-4af80c20c5764b099f36b0504b29c9a6-depl
+  labels:
+    app: employeecollection-coll-4af80c20c5764b099f36b0504b29c9a6
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: employeecollection-coll-4af80c20c5764b099f36b0504b29c9a6
+  template:
+    metadata:
+      labels:
+        app: employeecollection-coll-4af80c20c5764b099f36b0504b29c9a6
+    spec:
+      containers:
+        - name: employeecollection-coll-4af80c20c5764b099f36b0504b29c9a6
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:employeecollection-coll-4af80c20c5764b099f36b0504b29c9a6
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9028
